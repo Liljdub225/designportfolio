@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "altivo", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+   /*background-image: url("/UI\ Design/BG.png");
+    background-size: cover;
+    background-repeat: no-repeat;*/
+    background: #f0f0f0;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #8F269D, #0f53bf);
+}
+
+.navbarLinks {
+    display: flex;
+    flex-direction: row;
+    /*gap: 40px;*/
+    font-size: 18px;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    /*height: 100%;*/
+}
+
+.navbarLinks li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    font-style: normal;
+    position: relative;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: background 0.3s ease;
+}
+
+.navbarLinks li a:hover {
+    background: rgba(0, 0, 0, 0.2); /* dark overlay on hover */
+    font-weight: 500; /* makes it bold like your screenshot */
+}
+
+.navbarLinks li {
+    height: 100px;
+}
+
+.logo {
+    padding: 0px 0px 0px 30px;
+    font-weight: 300;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo a span {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* DESCRIPTION SECTION*/
+.main-section {
+    display: block;
+    max-width: 75%;
+    justify-content: center;
+    margin: 120px 160px;
+    scale: 100%;
+}
+
+.description-tag {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.description-summary {
+    margin-bottom: 100px;
+}
+
+/* GALLERY */
+:root{
+    --radius: 16px;                    /* inner corner radius */
+    --pad: 6px;                        /* gradient ring thickness */
+    --ring: linear-gradient(135deg, #9327a7, #0f53bf);
+  }
+  
+  /* layout (unchanged) */
+  .gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 30px;
+  }
+  @media (max-width: 1000px){ .gallery{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px){  .gallery{ grid-template-columns: 1fr; } }
+  
+  /* CARD — image only by default */
+  .card{
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 10;
+    border-radius: calc(var(--radius) + var(--pad));  /* outer radius (ring edge) */
+    overflow: hidden;
+    max-width: 800px;
+    border: #1a1a1a, solid, 1px;
+  }
+  
+  /* IMAGE — controls crop + motion */
+  /*.card-img{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: var(--radius);       
+    object-fit: cover;
+    object-position: 50% 50%;          
+    transition: transform .5s ease;
+  }*/
+
+  .card-img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: var(--x, 50%) var(--y, 50%); /* per-card position */
+    transform: scale(var(--scale, 1));            /* 👈 NEW: per-card zoom */
+    transition: transform .5s ease;
+    border-radius: var(--radius);
+    position: relative;
+    z-index: 0;
+  }
+  
+  
+  
+  /* GRADIENT RING — hidden until hover */
+  .card::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: calc(var(--radius) + var(--pad));
+    padding: var(--pad);
+    background: var(--ring);
+  
+    /* Punch a hole so only the ring is visible */
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+  
+    opacity: 0;                         /* hidden at rest */
+    transition: opacity .3s ease;
+    z-index: 1;                         /* above image, below overlay */
+    pointer-events: none;
+  }
+  
+  /* OVERLAY — sits INSIDE the ring so it doesn't cover the border */
+  .overlay{
+    position: absolute;
+    inset: var(--pad);                  /* KEY: keeps overlay inside the ring */
+    border-radius: var(--radius);
+    background: rgba(0,0,0,.55);
+    display: grid;
+    place-content: center;
+    text-align: center;
+    gap: 12px;
+    padding: 20px;
+    opacity: 0;                         /* hidden at rest */
+    transition: opacity .3s ease;
+    z-index: 2;                         /* above ring */
+  }
+  
+  .overlay h3{ color:#fff; margin:0; font-weight:700; font-size: 24px; }
+  .overlay p { color:rgba(255,255,255,.85); margin:0; font-weight:300; font-size:16px; }
+  
+  /* HOVER STATES */
+  .card:hover .card-img{ transform: scale(1.05); }
+  .card:hover::before{ opacity: 1; }    /* ring fades in */
+  .card:hover .overlay{ opacity: 1; }   /* overlay + text fade in */
+  
+  /* OPTIONAL helper classes to control the visible part of each image */
+  .obj-top    { object-position: 50% 20%; }
+  .obj-bottom { object-position: 50% 80%; }
+  .obj-left   { object-position: 20% 50%; }
+  .obj-right  { object-position: 80% 50%; }
+  .obj-face   { object-position: 50% 30%; }  /* handy for portraits */
+  
+  
+
+
+
