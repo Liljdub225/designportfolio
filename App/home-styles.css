@@ -51,6 +51,11 @@ body {
     font-weight: 500; /* makes it bold like your screenshot */
 }
 
+.navbarLinks li a.active {
+    /*background: rgba(0, 0, 0, 0.2); /* dark overlay on hover */
+    font-weight: 500; /* makes it bold like your screenshot */
+}
+
 .navbarLinks li {
     height: 100px;
 }
@@ -116,7 +121,7 @@ body {
 }
 
 .mywork:hover, .contact:hover {
-    transform: scale(1.15);
+    transform: scale(1.08);
     background: linear-gradient(to right, #8F269D, #0f53bf);
     cursor: pointer;
 }
