@@ -52,6 +52,11 @@ body {
     font-weight: 500; /* makes it bold like your screenshot */
 }
 
+.navbarLinks li a.active {
+    /*background: rgba(0, 0, 0, 0.2); /* dark overlay on hover */
+    font-weight: 500; /* makes it bold like your screenshot */
+}
+
 .navbarLinks li {
     height: 100px;
 }
@@ -91,7 +96,7 @@ body {
 
 /* GALLERY */
 :root{
-    --radius: 16px;                    /* inner corner radius */
+    --radius: 10px;                    /* inner corner radius */
     --pad: 6px;                        /* gradient ring thickness */
     --ring: linear-gradient(135deg, #9327a7, #0f53bf);
   }
@@ -114,7 +119,9 @@ body {
     border-radius: calc(var(--radius) + var(--pad));  /* outer radius (ring edge) */
     overflow: hidden;
     max-width: 800px;
-    border: #1a1a1a, solid, 1px;
+    /*border: #1a1a1a, solid, 1px;*/
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
   
   /* IMAGE — controls crop + motion */
@@ -155,16 +162,21 @@ body {
     background: var(--ring);
   
     /* Punch a hole so only the ring is visible */
-    -webkit-mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-            mask-composite: exclude;
-  
-    opacity: 0;                         /* hidden at rest */
-    transition: opacity .3s ease;
-    z-index: 1;                         /* above image, below overlay */
-    pointer-events: none;
+    mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+
+  /* WebKit fallback (Safari/Chrome) */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+
+  opacity: 0;                         /* hidden at rest */
+  transition: opacity .3s ease;
+  z-index: 1;                         /* above image, below overlay */
+  pointer-events: none;
   }
   
   /* OVERLAY — sits INSIDE the ring so it doesn't cover the border */
