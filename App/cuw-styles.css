@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "altivo", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+   /*background-image: url("/UI\ Design/BG.png");
+    background-size: cover;
+    background-repeat: no-repeat;*/
+    background: #f0f0f0;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #8F269D, #0f53bf);
+}
+
+.navbarLinks {
+    display: flex;
+    flex-direction: row;
+    /*gap: 40px;*/
+    font-size: 18px;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    /*height: 100%;*/
+}
+
+.navbarLinks li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    font-style: normal;
+    position: relative;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: background 0.3s ease;
+}
+
+.navbarLinks li a:hover {
+    background: rgba(0, 0, 0, 0.2); /* dark overlay on hover */
+    font-weight: 500; /* makes it bold like your screenshot */
+}
+
+.navbarLinks li a.active {
+    /*background: rgba(0, 0, 0, 0.2); /* dark overlay on hover */
+    font-weight: 500; /* makes it bold like your screenshot */
+}
+
+.navbarLinks li {
+    height: 100px;
+}
+
+.logo {
+    padding: 0px 0px 0px 30px;
+    font-weight: 300;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo a span {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* MAIN */
+.back {
+    display: inline-flex;          /* lets margins & padding work, centers content */
+    align-items: center;
+    gap: 8px;                      /* space if you swap to an icon later */
+    margin: 30px 0 0 30px;         /* now the top/left margins apply */
+    padding: 8px 12px;             /* bigger click target */
+    font-weight: 500;
+    text-decoration: none;
+    color: #1a1a1a;                /* your purple */
+    border-radius: 8px;            /* optional */
+    font-size: 20px;
+  }
+  
+  .back:hover, .back:focus-visible {
+    color: #8F269D;    /* simple hover/focus affordance */
+    outline: none;
+  }
+  
+/* DESCRIPTION SECTION*/
+.main-section {
+    display: block;
+    max-width: 75%;
+    justify-content: center;
+    margin: 40px 160px;
+    scale: 100%;
+}
+
+.description-tag {
+    font-size: 35px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/*.description-summary {
+    margin-bottom: 20px;
+}*/
+
+#bottom-paragraph {
+    margin: 0 0 35px 0;
+}
+
+/*.project-description-header {
+    text-transform: uppercase;
+    font-size: 20px;
+}*/
+
+/* PROJECT VISUALS */
+/*.visuals {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0 70px 0;
+    object-fit: cover;
+    width: 100%;
+    justify-content: center;
+}
+
+@media (max-width: 1000px){ .visuals{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px){  .visuals{ grid-template-columns: 1fr; } }
+
+.examples {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}*/
+.visuals {
+  column-width: 340px;       /* target column width */
+  column-gap: 24px;           /* space between columns */
+  margin: 30px 0 70px;
+}
+
+.examples {
+  width: 100%;
+  height: auto;                /* keep natural aspect ratio */
+  display: block;
+  margin: 0 0 24px;             /* space between items vertically */
+  break-inside: avoid;          /* prevents images from breaking across columns */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  border-radius: 10px;
+}
