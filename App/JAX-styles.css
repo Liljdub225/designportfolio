@@ -144,10 +144,24 @@ body {
     border-radius: 10px;
 }*/
 
-.visuals {
-  column-width: 400px;       /* target column width */
-  column-gap: 24px;           /* space between columns */
+/* CONTAINER: one pair per row */
+.visuals{
+  display: grid;
+  grid-template-columns: 1fr;  /* one pair per row */
+  gap: 24px;
   margin: 30px 0 70px;
+}
+
+/* PAIR: two pages side-by-side; stack on small screens */
+.pair{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start; /* Aligns top edges of both items in the row */
+}
+
+@media (max-width: 900px){
+  .pair{ grid-template-columns: 1fr; }  /* right page drops under left */
 }
 
 .examples {
@@ -155,7 +169,7 @@ body {
   height: auto;                /* keep natural aspect ratio */
   display: block;
   margin: 0 0 24px;             /* space between items vertically */
-  break-inside: avoid;          /* prevents images from breaking across columns */
+  break-inside: avoid;         /* prevents images from breaking across columns */
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   border-radius: 10px;
 }
