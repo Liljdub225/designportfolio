@@ -6,9 +6,10 @@
 }
 
 body {
-    background-image: url("/UI\ Design/BG.png");
+    background-image: url("/Elements/portBG.png");
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100%;
 }
 
 /* NAVBAR */
@@ -82,6 +83,11 @@ body {
     justify-content: center;
     margin: 120px 160px;
     scale: 100%;
+    background-color: rgba(240, 240, 240, 0.9); /* add and change bg color opacity */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .name {
@@ -89,6 +95,7 @@ body {
     margin: 0;
     line-height: 0.75;
     font-weight: 500;
+    color: #1a1a1a;
 }
 
 .roles {
@@ -106,7 +113,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 30px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .mywork, .contact {
@@ -124,5 +131,19 @@ body {
     transform: scale(1.08);
     background: linear-gradient(to right, #8F269D, #0f53bf);
     cursor: pointer;
+}
+
+/* Tablet Responsive */
+@media (min-width: 481px) and (max-width: 1199px){
+    body {
+        background-image: url("/Elements/portBG.png");
+        background-repeat: no-repeat;
+        background-position: center center; /* horizontally + vertically center */
+        min-height: 100vh; /* stating minimum height to be 100% of viewport*/
+        background-size: cover;
+    }
+    .roles {
+        line-height: 0.9;
+    }
 }
 
