@@ -114,7 +114,7 @@ body {
 }
 
 #bottom-paragraph {
-    margin: 0 0 35px 0;
+    margin: 0 0 40px 0;
 }
 
 .project-description-header {
@@ -156,8 +156,9 @@ body {
 .pair{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 20px;
   align-items: start; /* Aligns top edges of both items in the row */
+  justify-items: center;
 }
 
 @media (max-width: 900px){
@@ -166,9 +167,10 @@ body {
 
 .examples {
   width: 100%;
+  max-width: 500px;
   height: auto;                /* keep natural aspect ratio */
   display: block;
-  margin: 0 0 24px;             /* space between items vertically */
+  margin: 0;            /* space between items vertically */
   break-inside: avoid;         /* prevents images from breaking across columns */
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   border-radius: 10px;
