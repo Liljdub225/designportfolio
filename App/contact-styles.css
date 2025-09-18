@@ -76,7 +76,7 @@ body {
 /* CONTACT FORM CONTAINER */
 .contact-form {
   width: 100%;
-  max-width: 800px;           /* keep it from getting too wide */
+  max-width: 800px;          /* keep it from getting too wide */
   margin: 60px auto;           /* center on the page */
   padding: 40px;
   background: #f9f9f9;          /* soft background */

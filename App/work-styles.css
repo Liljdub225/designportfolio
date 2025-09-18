@@ -95,7 +95,7 @@ body {
 }
 
 /* GALLERY */
-:root{
+:root{ /* defining const variables to be used later*/
     --radius: 10px;                    /* inner corner radius */
     --pad: 6px;                        /* gradient ring thickness */
     --ring: linear-gradient(135deg, #9327a7, #0f53bf);
@@ -143,7 +143,7 @@ body {
     display: block;
     object-fit: cover;
     object-position: var(--x, 50%) var(--y, 50%); /* per-card position */
-    transform: scale(var(--scale, 1));            /* 👈 NEW: per-card zoom */
+    transform: scale(var(--scale, 1));            /* per-card zoom */
     transition: transform .5s ease;
     border-radius: var(--radius);
     position: relative;
@@ -184,7 +184,7 @@ body {
     position: absolute;
     inset: var(--pad);                  /* KEY: keeps overlay inside the ring */
     border-radius: var(--radius);
-    background: rgba(0,0,0,.55);
+    background: rgba(0,0,0,.75);
     display: grid;
     place-content: center;
     text-align: center;
