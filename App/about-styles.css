@@ -173,11 +173,38 @@ header {
   font-size: 2em;
   margin-bottom: 10px;
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 .about-text p {
   margin-bottom: 16px;
   line-height: 1.6;
+}
+
+.about-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-btn {
+    border: 0;
+    outline: 0;
+    background: linear-gradient(to right, #1a1a1a, #1a1a1a); /* solid, but still a gradient. prevents weird button flash */
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    scale: 1.1;
+    transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+    transform: scale(1.08);
+    background: linear-gradient(to right, #8F269D, #0f53bf);
+    cursor: pointer;
 }
 
 
