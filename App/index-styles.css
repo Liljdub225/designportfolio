@@ -11,8 +11,8 @@
 
 body {
     background: 
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),  /* overlay */
-    url("/Elements/portBG.png") no-repeat center center / cover;
+    /* linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), */
+    url("/App//Elements/hero-img.png") no-repeat center center / cover;
     min-height: 100vh;
 }
 
@@ -108,7 +108,7 @@ header {
     justify-content: center;
     margin: 7.5em auto;             /* centers hero box in page despite sizing changes */
     scale: (1.0);
-    background-color: rgba(240, 240, 240, 0.9); /* add and change bg color opacity */
+    background-color: rgba(240, 240, 240, 0.8); /* add and change bg color opacity */
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
