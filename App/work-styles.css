@@ -103,6 +103,11 @@ header {
     padding-top: 5em;
 }
 
+.description {
+    width: 100%;
+    max-width: 950px;
+}
+
 .description-tag {
     font-size: 35px;
     font-weight: 500;
