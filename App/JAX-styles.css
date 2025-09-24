@@ -128,6 +128,8 @@ header {
 
 .description-summary {
     margin-bottom: 20px;
+    width: 100%;
+    max-width: 950px;
 }
 
 #bottom-paragraph {
@@ -137,6 +139,11 @@ header {
 .project-description-header {
     text-transform: uppercase;
     font-size: 20px;
+}
+
+.description {
+    width: 100%;
+    max-width: 950px;
 }
 
 /* PROJECT VISUALS */

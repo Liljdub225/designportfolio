@@ -10,10 +10,10 @@
 }
 
 body {
-    background-image: url("/Elements/portBG.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;          /* Guarantees BG photo covers viewport at all times */
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),  /* overlay */
+    url("/Elements/portBG.png") no-repeat center center / cover;
+    min-height: 100vh;
 }
 
 header {
@@ -104,13 +104,13 @@ header {
 /* HERO */
 .hero {
     display: block;
-    max-width: 75%;
+    max-width: 65%;
     justify-content: center;
     margin: 7.5em auto;             /* centers hero box in page despite sizing changes */
     scale: (1.0);
     background-color: rgba(240, 240, 240, 0.9); /* add and change bg color opacity */
     padding: 40px;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -135,6 +135,10 @@ header {
     line-height: 2rem;
 }
 
+.description {
+    margin-top: 1rem;
+}
+
 .mainbuttons {
     display: flex;
     flex-direction: row;
@@ -147,8 +151,8 @@ header {
     outline: 0;
     background: linear-gradient(to right, #1a1a1a, #1a1a1a); /* solid, but still a gradient. prevents weird button flash */
     color: #fff;
-    border-radius: 5px;
-    padding: 10px 15px;
+    border-radius: 20px;
+    padding: 10px 25px;
     scale: 1.1;
     transition: all 0.3s ease;
 }
