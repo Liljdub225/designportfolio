@@ -17,6 +17,10 @@ header {
     background: linear-gradient(to right, #8F269D, #0f53bf);
 }
 
+img {
+    width: 100%;
+}
+
 /* NAVBAR */
 .navbar {
     width: 100%;
@@ -127,6 +131,7 @@ header {
     font-size: 35px;
     font-weight: 500;
     text-transform: uppercase;
+    line-height: 3rem;
 }
 
 /*.description-summary {
@@ -211,8 +216,11 @@ header {
     .navbarLinks.active {
         left: 0;
     }
+
+    .description-tag {
+        line-height: 2rem;
+    }
 }
-  
   
 
 
