@@ -12,12 +12,16 @@
 body {
     background: 
     /* linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), */
-    url("/Elements/hero-img.png") no-repeat center center / cover;
+    url("/App/Elements/hero-img.png") no-repeat center center / cover;
     min-height: 100vh;
 }
 
 header {
     background: linear-gradient(to right, #8F269D, #0f53bf);
+}
+
+img {
+    width: 100%;
 }
 
 /* NAVBAR */
@@ -202,6 +206,12 @@ header {
 
     .hero {
         min-width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 1.2rem;
     }
 }
 
