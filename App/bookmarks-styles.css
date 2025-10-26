@@ -197,6 +197,7 @@ img {
     font-size: 1rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* horizontal, vertical, blur */
     transition: opacity 0.3s ease;
+    z-index: 999;
 }
 
 #backToTop:hover {

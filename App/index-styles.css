@@ -155,7 +155,7 @@ img {
     outline: 0;
     background: linear-gradient(to right, #1a1a1a, #1a1a1a); /* solid, but still a gradient. prevents weird button flash */
     color: #fff;
-    border-radius: 20px;
+    border-radius: 8px;
     padding: 10px 25px;
     scale: 1.1;
     transition: all 0.3s ease;
