@@ -220,4 +220,8 @@ img {
     .navbarLinks.active {
         left: 0;
     }
+
+    .description-tag {
+        line-height: 1.5rem;
+    }
 }

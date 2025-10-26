@@ -236,6 +236,10 @@ img {
     .navbarLinks.active {
         left: 0;
     }
+
+    .description-tag {
+        line-height: 2rem;
+    }
 }
   
   
